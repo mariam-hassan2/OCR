@@ -1,9 +1,0 @@
-gradio==4.44.0
-transformers==4.44.0
-torch
-pillow
-accelerate
-matplotlib
-scikit-learn
-seaborn
-jupyter
