@@ -1,12 +1,13 @@
-# OCR
-
+```
+OCR/
 ├── src/
-│ ├── __init__.py
-│ ├── model.py 
-│ ├── utils.py 
-│ └── eval.py 
+│   ├── __init__.py
+│   ├── model.py
+│   ├── utils.py
+│   └── eval.py
 ├── notebooks/
-│ ├── 
-├── main.py 
+│   ├── 
+├── main.py
 ├── requirements.txt
 └── README.md
+```
