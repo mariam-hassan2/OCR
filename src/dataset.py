@@ -6,14 +6,14 @@ from transformers import TrOCRProcessor
 
 class LicenseDataset(Dataset):
     def __init__(self, folder_path, processor, augment=False):
-        self.df = build_df(folder_path)  # Your build_df
+        self.df = build_df(folder_path)  
         self.processor = processor
         self.augment = augment
     
     def __getitem__(self, idx):
         row = self.df.iloc[idx]
         image = Image.open(row['image_path']).convert('RGB')
-        image = preprocess_image(image)  # Your PIL
+        image = preprocess_image(image)  
         
         pixels = self.processor(image, return_tensors="pt").pixel_values.squeeze()
         tokens = self.processor.tokenizer(row['label'], padding="max_length", max_length=20).input_ids
